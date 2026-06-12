@@ -291,4 +291,3 @@ rule Credential_Stealer_Generic {
 }
 ```
 
-No single string triggers this. Every branch requires at least 2-3 conditions co-occurring. That's what separates a professional rule from a copy-paste job.
