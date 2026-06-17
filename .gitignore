@@ -1,0 +1,14 @@
+samples/
+*.exe
+*.dll
+*.bin
+*.vbs
+*.ps1
+
+yara-env/
+__pycache__/
+*.pyc
+
+# OS noise
+.DS_Store
+Thumbs.db
