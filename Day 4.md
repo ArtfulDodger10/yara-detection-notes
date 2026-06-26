@@ -258,14 +258,11 @@ import "dotnet"
 rule AgentTesla_Malware {
     meta:
         description    = "Detects AgentTesla .NET RAT"
-        author         = "Artful Dodger"
         malware_family = "AgentTesla"
         sample_sha256  = 
         "1ca6c053e788f8ea1e1eec1c712cf0ec5374ba5d8caf432717842c702e3cda0e"
         reference      = "https://artfuldodger10.github.io/posts/AgentTesla-RAT-
         Full-Malware-Analysis-Report/"
-        confidence     = "High"
-        techniques     = "T1140, T1620, T1071.003, T1555.003, T1056.001"
 
     strings:
 
