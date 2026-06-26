@@ -265,7 +265,6 @@ rule High_Entropy_Section {
     meta:
         description = "PE file containing a high-entropy section — possible
          packing or encryption"
-        author      = "Artful Dodger"
 
     condition:
         pe.is_pe and
@@ -285,7 +284,6 @@ rule Process_Injection_Loader {
     meta:
         description = "PE importing the classic Win32 process injection API
          combination"
-        author      = "Artful Dodger"
 
     condition:
         pe.is_pe and
@@ -309,8 +307,6 @@ rule Suspicious_DotNet_NativeCalls {
     meta:
         description = ".NET assembly importing native injection APIs or containing
          a high-entropy section"
-        author      = "Artful Dodger"
-        confidence  = "Medium"
 
     condition:
         dotnet.is_dotnet and
@@ -345,7 +341,6 @@ rule Overlay_Dropper {
     meta:
         description = "PE with large high-entropy overlay — likely embedded
          payload"
-        author      = "Artful Dodger"
 
     condition:
         pe.is_pe and
@@ -366,9 +361,6 @@ import "pe"
 rule Classic_Process_Injection {
     meta:
         description = "PE importing the classic Win32 process injection API triad"
-        author      = "Artful Dodger"
-        confidence  = "High"
-        technique   = "T1055.003 — Process Injection: Thread Execution Hijacking"
 
     condition:
         pe.is_pe and
@@ -387,8 +379,6 @@ import "math"
 rule High_Entropy_Packed_PE {
     meta:
         description = "PE with high-entropy section — likely packed or encrypted"
-        author      = "Artful Dodger"
-        confidence  = "High"
 
     condition:
         pe.is_pe and
@@ -409,8 +399,6 @@ rule Suspicious_DotNet_NativeCalls {
     meta:
         description = ".NET assembly importing native injection APIs or containing
          high-entropy section"
-        author      = "Nader"
-        confidence  = "Medium"
 
     condition:
         dotnet.is_dotnet and
@@ -488,8 +476,6 @@ import "dotnet"
 rule check_DotNet {
 	meta: 
 		description = "Simple .NET check" 
-		author = "Artful Dodger" 
-	confidence = "High" 
 		condition: 
 			dotnet.is_dotnet 
 			
