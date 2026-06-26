@@ -40,11 +40,6 @@ import "pe"
 rule Classic_Process_Injection : injection process_memory mitre_t1055 {
     meta:
         description = "PE importing the classic Win32 process injection API triad"
-        author      = "Nader"
-        confidence  = "High"
-        technique   = "T1055.003"
-        severity    = "Critical"
-        version     = "1.0"
 
     strings:
         $alloc  = "VirtualAllocEx"    ascii
