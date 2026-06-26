@@ -336,12 +336,9 @@ import "dotnet"
 rule AsyncRAT_cooked {
     meta:
         description    = "Detects AsyncRAT via hardcoded persistence command, crypto stack, anti-analysis strings, and behavioral config artifacts"
-        author         = "Artful Dodger"
-        date           = "2026-06-24"
         malware_family = "AsyncRAT"
         sample_sha256  = "3dbaf616dcaacfcf66909b7a3404d1536f9e0d230b3b59934f1ccc6fe3e20554"
         reference      = "https://artfuldodger10.github.io/posts/AsyncRAT-Analysis/"
-        techniques     = "T1219, T1053.005, T1547.001, T1497, T1573.001, T1614.001"
 
     strings:
         // full persistence command hardcoded as string
